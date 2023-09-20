@@ -278,6 +278,26 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- [[ My keybindings ]]
+-- Map Ctrl + s to save file
+vim.keymap.set('n', '<C-s>', ':w<cr>', { desc = '[S]ave [File]' })
+
+-- Map Ctrl + e to exit file
+vim.keymap.set('n', '<C-e>', ':q<cr>', { desc = '[Q]uit [File]' })
+
+-- Map Ctrl + c to clear highlighting
+vim.keymap.set('n', '<C-c>', ':nohl<cr>', { desc = '[C]lear [H]ighlighting' })
+
+-- Map Ctrl + a to highlight all text
+vim.keymap.set('n', '<C-a>', 'ggVG<cr>', { desc = '[H]ighlight [A]all [T]ext' })
+
+-- [[ Better window management ]]
+-- Move between panes to left/bottom/top/right
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = '[N]avigate [P]ane [L]eft' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = '[N]avigate [P]ane [D]own' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = '[N]avigate [P]ane [U]p' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = '[N]avigate [P]ane [R]ight' })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -287,6 +307,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
   group = highlight_group,
   pattern = '*',
+})
+
+-- [[ Auto save ]]
+-- Auto Save on focus lost and leaving buffer
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+  callback = function()
+    if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+      vim.api.nvim_command('silent update')
+    end
+  end,
 })
 
 -- [[ Configure Telescope ]]
