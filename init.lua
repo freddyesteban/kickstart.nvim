@@ -279,17 +279,14 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ My keybindings ]]
--- Map Ctrl + s to save file
-vim.keymap.set('n', '<C-s>', ':w<cr>', { desc = '[S]ave [File]' })
-
--- Map Ctrl + e to exit file
-vim.keymap.set('n', '<C-e>', ':q<cr>', { desc = '[Q]uit [File]' })
-
 -- Map Ctrl + c to clear highlighting
 vim.keymap.set('n', '<C-c>', ':nohl<cr>', { desc = '[C]lear [H]ighlighting' })
 
 -- Map Ctrl + a to highlight all text
 vim.keymap.set('n', '<C-a>', 'ggVG<cr>', { desc = '[H]ighlight [A]all [T]ext' })
+
+-- Toggle nvim-tree
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', { desc = '[T]oggle [N]vim-tree' })
 
 -- [[ Better window management ]]
 -- Move between panes to left/bottom/top/right
