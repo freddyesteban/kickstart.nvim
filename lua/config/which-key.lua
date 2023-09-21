@@ -9,6 +9,57 @@ local mappings = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Git Diff",
     },
+    f = { "<cmd>Telescope git_files<cr>", "Search Git Files" },
+    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  },
+  l = {
+    name = "LSP",
+    d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
+    w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
+    i = { "<cmd>LspInfo<cr>", "Info" },
+    I = { "<cmd>Mason<cr>", "Mason Info" },
+    j = {
+      "<cmd>lua vim.diagnostic.goto_next()<cr>",
+      "Next Diagnostic",
+    },
+    k = {
+      "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+      "Prev Diagnostic",
+    },
+    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
+    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    S = {
+      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+      "Workspace Symbols",
+    },
+    e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+  },
+  s = {
+    name = "Search",
+    b = {
+      "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({winblend = 10, previewer = false}))<cr>", "Fuzzily search in current buffer"
+    },
+    d = { "<cmd>Telescope diagnostics<cr>", "Search Diagnostics" },
+    c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    f = { "<cmd>Telescope find_files<cr>", "Search Files" },
+    w = { "<cmd>Telescope grep_string<cr>", "Search current word" },
+    g = { "<cmd>Telescope live_grep<cr>", "Search by Grep" },
+    r = { "<cmd>Telescope resume<cr>", "Search Resume" },
+    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
+    M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    R = { "<cmd>Telescope registers<cr>", "Registers" },
+    t = { "<cmd>Telescope live_grep<cr>", "Text" },
+    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    l = { "<cmd>Telescope resume<cr>", "Resume last search" },
+    p = {
+      "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+      "Colorscheme with Preview",
+    },
   },
 }
 
