@@ -2,7 +2,7 @@
 -- https://github.com/akinsho/bufferline.nvim
 return {
   "akinsho/bufferline.nvim",
-  version = "main",
+  branch = "main",
   event = { "BufRead", "BufWinEnter", "BufNewFile" },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
