@@ -76,7 +76,7 @@ local mappings = {
     name = "Vim",
     s = { "<cmd>w<cr>", "Save file" },
     q = { "<cmd>q<cr>", "Quit file" },
-    -- w = { "<cmd>set list!<cr>", "Quit file" },
+    w = { "<cmd>set list!<cr>", "Toggle whitespace" },
   }
 }
 
