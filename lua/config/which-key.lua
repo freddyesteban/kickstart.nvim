@@ -14,6 +14,9 @@ local mappings = {
   },
   l = {
     name = "LSP",
+    a = { "<cmd>lua vim.lsp.code_action()<cr>", "Code Action" },
+    A = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "Workspace Add Folder" },
+    e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
     d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
     w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     i = { "<cmd>LspInfo<cr>", "Info" },
@@ -26,15 +29,20 @@ local mappings = {
       "<cmd>lua vim.diagnostic.goto_prev()<cr>",
       "Prev Diagnostic",
     },
+    o = {
+      "<cmd>lua vim.diagnostic.open_float()<cr>",
+      "Open Floating Diagnostic Message",
+    },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    R = { "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", "Workspace Remove Folder" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
-    e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+    t = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
   },
   s = {
     name = "Search",
@@ -60,6 +68,10 @@ local mappings = {
       "Colorscheme with Preview",
     },
   },
+  -- d = {
+  --   name = "Diagnostics",
+  --   l = { "<cmd>lua vim.diagnostic.setloclist" }
+  -- }
 }
 
 
