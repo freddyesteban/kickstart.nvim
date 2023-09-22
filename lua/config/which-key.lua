@@ -34,6 +34,9 @@ local mappings = {
       "Open Floating Diagnostic Message",
     },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    L = {
+      "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", "Worspace List Folders"
+    },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     R = { "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", "Workspace Remove Folder" },
