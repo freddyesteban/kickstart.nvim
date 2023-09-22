@@ -71,10 +71,7 @@ local mappings = {
       "Colorscheme with Preview",
     },
   },
-  -- d = {
-  --   name = "Diagnostics",
-  --   l = { "<cmd>lua vim.diagnostic.setloclist" }
-  -- }
+  t = { "<cmd>NvimTreeToggle<cr>", "Toggle Nvim Tree" },
 }
 
 

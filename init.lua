@@ -304,9 +304,6 @@ vim.keymap.set('n', '<C-c>', ':nohl<cr>', { desc = '[C]lear [H]ighlighting' })
 -- Map Ctrl + a to highlight all text
 vim.keymap.set('n', '<C-a>', 'ggVG<cr>', { desc = '[H]ighlight [A]all [T]ext' })
 
--- Toggle nvim-tree
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', { desc = 'Toggle nvim-tree' })
-
 -- [[ Better window management ]]
 -- Move between panes to left/bottom/top/right
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = '[N]avigate [P]ane [L]eft' })
