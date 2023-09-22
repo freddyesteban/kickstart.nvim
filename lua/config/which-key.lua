@@ -72,6 +72,12 @@ local mappings = {
     },
   },
   t = { "<cmd>NvimTreeToggle<cr>", "Toggle Nvim Tree" },
+  v = {
+    name = "Vim",
+    s = { "<cmd>w<cr>", "Save file" },
+    q = { "<cmd>q<cr>", "Quit file" },
+    -- w = { "<cmd>set list!<cr>", "Quit file" },
+  }
 }
 
 
