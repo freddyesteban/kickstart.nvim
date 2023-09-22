@@ -274,6 +274,19 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Set listchars for whitespace rendering
+vim.opt.list = true
+vim.opt.listchars = vim.opt.listchars + "space:·,tab:>→"
+
+-- Default number of visual spaces per tab
+-- vim.opt.tabstop = 4
+
+--
+-- vim.opt.softtabstop = 4
+
+-- Width for autoindents
+-- vim.opt.shiftwidth = 4
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
