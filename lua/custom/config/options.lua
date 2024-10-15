@@ -1,15 +1,3 @@
--- Map Ctrl + s to save file
-vim.keymap.set('n', '<C-s>', ':w<cr>', { desc = '[S]ave [File]' })
-
--- Map Ctrl + e to exit file
-vim.keymap.set('n', '<C-e>', ':q<cr>', { desc = '[Q]uit [File]' })
-
--- Map Ctrl + c to clear highlighting
-vim.keymap.set('n', '<C-c>', ':nohl<cr>', { desc = '[C]lear [H]ighlighting' })
-
--- Map Ctrl + a to highlight all text
-vim.keymap.set('n', '<C-a>', 'ggVG<cr>', { desc = '[H]ighlight [A]all [T]ext' })
-
 -- [[ Better window management ]]
 -- Move between panes to left/bottom/top/right
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = '[N]avigate [P]ane [L]eft' })
