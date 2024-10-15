@@ -1,0 +1,2 @@
+-- Toggle nvim-tree
+-- vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<cr>', { desc = 'Toggle nvim-tree' })

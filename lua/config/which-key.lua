@@ -1,5 +1,7 @@
 local M = {}
 
+-- Not currently used
+
 local mappings = {
   g = {
     name = "Git",
